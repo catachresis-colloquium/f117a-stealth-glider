@@ -20,7 +20,7 @@
 repository:
   name: "f117a-stealth-glider"
   description: "Operation Nightglass — a stealth puzzle on a live Conway's Game of Life field, where cover moves."
-  homepage: "https://github.com/metadatastician/f117a-stealth-glider"
+  homepage: "https://github.com/catachresis-colloquium/f117a-stealth-glider"
   private: false
   has_issues: true
   has_projects: true

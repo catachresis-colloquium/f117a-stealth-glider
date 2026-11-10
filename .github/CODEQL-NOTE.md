@@ -9,7 +9,7 @@ Code scanning on this repository runs through **GitHub code-scanning default
 setup**, which is already enabled:
 
 ```console
-$ gh api repos/metadatastician/f117a-stealth-glider/code-scanning/default-setup
+$ gh api repos/catachresis-colloquium/f117a-stealth-glider/code-scanning/default-setup
 state=configured
 ```
 

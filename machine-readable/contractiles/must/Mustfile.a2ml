@@ -194,7 +194,7 @@ generic template.
 
 ### clade-identity-is-ours
 - description: CLADE.a2ml declares THIS repository — UUID RECOMPUTED, not merely not-the-template's
-- run: grep -q 'canonical-name = "f117a-stealth-glider"' machine-readable/descriptiles/CLADE.a2ml && grep -q "uuid = \"$(uuidgen --sha1 --namespace @url --name 'github.com/metadatastician/f117a-stealth-glider')\"" machine-readable/descriptiles/CLADE.a2ml
+- run: grep -q 'canonical-name = "f117a-stealth-glider"' machine-readable/descriptiles/CLADE.a2ml && grep -q "uuid = \"$(uuidgen --sha1 --namespace @url --name 'github.com/catachresis-colloquium/f117a-stealth-glider')\"" machine-readable/descriptiles/CLADE.a2ml
 - severity: critical
 - notes: |
     Strengthened after this repo hit the bug during scaffolding. The inherited probe
