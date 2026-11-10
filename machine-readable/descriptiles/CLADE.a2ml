@@ -14,11 +14,11 @@
 # docs/SPEC-clade-verisim-portal.adoc §Identity Model):
 #     uuid = UUIDv5(namespace = URL, name = "github.com/<owner>/<name>")
 # Recompute it with:
-#     uuidgen --sha1 --namespace @url --name "github.com/metadatastician/f117a-stealth-glider"
-#     -> 4dcf4ed6-89ce-548e-9bba-6a4fc6a2d74f
-uuid = "4dcf4ed6-89ce-548e-9bba-6a4fc6a2d74f"
+#     uuidgen --sha1 --namespace @url --name "github.com/catachresis-colloquium/f117a-stealth-glider"
+#     -> 62b8d733-7153-50b2-bc15-1a832935e668
+uuid = "62b8d733-7153-50b2-bc15-1a832935e668"
 primary-forge = "github"
-primary-owner = "metadatastician"
+primary-owner = "catachresis-colloquium"
 canonical-name = "f117a-stealth-glider"
 prefixed-name = "gm-f117a-stealth-glider"
 
@@ -32,7 +32,7 @@ assigned = "2026-07-22"
 rationale = "Games & Interactive (`gm`): this is a playable single-player puzzle game with a win condition, shipped as a self-contained browser artefact. No secondary clade is claimed. `fv` (Formal Verification & Proofs) would be a tempting second given the verification ledger, but the ledger is exhaustive empirical sweep plus an argued spacing lemma — not mechanised proof — and claiming `fv` would overstate it. `ax` is likewise not claimed: cellular automata are the subject matter, not neurosymbolic AI."
 
 [forges]
-github = "metadatastician/f117a-stealth-glider"
+github = "catachresis-colloquium/f117a-stealth-glider"
 
 [lineage]
 # `parent` is a monorepo parent, NOT a description. Estate-wide, repo
