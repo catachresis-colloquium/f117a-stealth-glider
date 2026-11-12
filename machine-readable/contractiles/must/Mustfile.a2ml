@@ -193,8 +193,8 @@ generic template.
 - severity: critical
 
 ### clade-identity-is-ours
-- description: CLADE.a2ml declares THIS repository — UUID RECOMPUTED, not merely not-the-template's
-- run: grep -q 'canonical-name = "f117a-stealth-glider"' machine-readable/descriptiles/CLADE.a2ml && grep -q "uuid = \"$(uuidgen --sha1 --namespace @url --name 'github.com/catachresis-colloquium/f117a-stealth-glider')\"" machine-readable/descriptiles/CLADE.a2ml
+- description: CLADE.a2ml declares THIS repository — UUID CHECKED against the registry's recorded birth id, not merely not-the-template's
+- run: grep -q 'canonical-name = "f117a-stealth-glider"' machine-readable/descriptiles/CLADE.a2ml && id="$(curl -fsSL --proto '=https' https://raw.githubusercontent.com/hyperpolymath/gv-clade-index/main/worker/data/repos.json | jq -r '.[] | select(.name == "f117a-stealth-glider") | .uuid')" && [ -n "$id" ] && grep -q "uuid = \"$id\"" machine-readable/descriptiles/CLADE.a2ml
 - severity: critical
 - notes: |
     Strengthened after this repo hit the bug during scaffolding. The inherited probe
@@ -206,6 +206,13 @@ generic template.
     The fix is to stop denylisting and start RECOMPUTING: derive the UUID from the
     canonical URL and require the file to declare exactly that. This now catches every
     wrong UUID, not the two we happened to think of.
+    Changed 2026-11-12 (gv-clade-index ADR 0008, owner rulings U1 to U4): a repo id
+    is minted once, from the path where the registry first recorded the repo, and
+    never changes on a move. Recomputing from the current path fails once a repo has
+    moved, as this one has. The probe now reads the id the registry records for this
+    repo (worker/data/repos.json, which the registry's own gate re-derives from the
+    birth path) and requires CLADE to declare exactly that. It still catches a copied
+    UUID such as f19's, because the registry holds one id per repo.
 
 ### contractiles-trident-present
 - description: All six contractile verbs exist on the trident layout
