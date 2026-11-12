@@ -16,7 +16,7 @@
 # Recompute it with:
 #     uuidgen --sha1 --namespace @url --name "github.com/catachresis-colloquium/f117a-stealth-glider"
 #     -> 62b8d733-7153-50b2-bc15-1a832935e668
-uuid = "62b8d733-7153-50b2-bc15-1a832935e668"
+uuid = "4dcf4ed6-89ce-548e-9bba-6a4fc6a2d74f"
 primary-forge = "github"
 primary-owner = "catachresis-colloquium"
 canonical-name = "f117a-stealth-glider"
